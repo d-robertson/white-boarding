@@ -1,3 +1,6 @@
+// Convert the given number into a roman numeral.
+
+// All roman numerals answers should be provided in upper-case.
 
 function convertToRoman(num) { 
  var string = '';
@@ -26,17 +29,13 @@ function convertToRoman(num) {
  
   string = dupLet("M", mP) + dupLet("D", dP) + dupLet("C", cP) + dupLet("L", lP) +
     dupLet("X", xP) + dupLet("V", vP) + dupLet("I", iP);
- 
-//   console.log(string);
+
   string = string.replace(/DC{4}/, "CM");
   string = string.replace(/C{4}/, "CD");
-
   string = string.replace(/LX{4}/, "XC");
   string = string.replace(/X{4}/, "XL");
-
   string = string.replace(/VI{4}/, "IX");
   string = string.replace(/I{4}/, "IV");
-//  console.log('mP', mP, 'dP', dP, 'cP', cP, 'lP', lP, 'xP', xP, 'vP', vP, 'iP', iP);
  
  return string;
 }
